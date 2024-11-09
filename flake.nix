@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     dark-notify = {
-      url = "github:cormacrelf/dark-notify?tag=0.1.2";
+      url = "github:Mudada/dark-notify";
       flake = false;
     };
   };
@@ -21,6 +21,10 @@
     	version = manifest.version;
     	cargoLock.lockFile = ./Cargo.lock;
     	src = ./.;
+	meta = {
+	  description = "a program for watching when macOS switches to dark mode";
+	  mainProgram = "dark-notify";
+	};
       };
     };
 }
